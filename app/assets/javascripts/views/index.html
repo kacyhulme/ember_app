@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>My First Ember App</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="public/lib/handlebars.js"></script>
+  <script src="lib/ember.min.js"></script>
+  <script src="lib/ember-data.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+
+  <script type='text/x-handlebars' data-template-name='application'>
+    <div class='navbar'>
+      {{#link-to 'index'}}Homepage{{/link-to}}
+      {{#link-to 'about'}}About{{/link-to}}
+    </div>
+    <div class='container'>{{outlet}}</div>
+    <footer class='container'> And more </footer>
+  </script>
+
+  <script type='text/x-handlebars' data-template-name='index'>
+    <h1> Welcome to Flint and Flame </h1>
+  </script>
+  
+  <script type='text/x-handlebars' data-template-name='about'>
+    <h1> About the Fire Spirits </h1>
+  </script>
+  
+</body>
+</html>
+
+

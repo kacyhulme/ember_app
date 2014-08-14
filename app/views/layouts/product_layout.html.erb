@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>My First Ember App</title>
+  <%= stylesheet_link_tag "application", media: "all" %>
+</head>
+<body>
+
+  <script type='text/x-handlebars' data-template-name='application'>
+    <div class='navbar'>
+      {{#link-to 'index'}}Homepage{{/link-to}}
+      {{#link-to 'about'}}About{{/link-to}}
+    </div>
+    <div class='container'>{{outlet}}</div>
+    <footer class='container'> And more </footer>
+  </script>
+
+  <script type='text/x-handlebars' data-template-name='index'>
+    <h1> Welcome to Flint and Flame </h1>
+  </script>
+  
+  <script type='text/x-handlebars' data-template-name='about'>
+    <h1> About the Fire Spirits </h1>
+  </script>
+  
+</body>
+</html>
+
+
