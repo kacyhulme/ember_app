@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
+  respond_to :html, :json
+
   def index
-    render text: '', layout: 'product_layout'  
   end
 end

@@ -1,1 +1,30 @@
-<%= @products %>
+<script type='text/x-handlebars' data-template-name='application'>
+  <div class='navbar-navbar'>
+    {{#link-to 'index' }}Homepage{{/link-to}} |
+    {{#link-to 'about' }}About{{/link-to}} |
+    {{#link-to 'products' }}Products{{/link-to}} |
+  </div>
+  <div class='container'>{{outlet}}</div>
+  <footer class='container'> This is the footer text </footer>
+</script>
+<script type='text/x-handlebars' data-template-name='index'>
+  <h1> Welcome to My Store </h1>
+</script>
+<script type='text/x-handlebars' data-template-name='about'>
+  <h1> About the Store </h1>
+<p>{{bio}}</p>
+</script>
+<script type="text/x-handlebars" data-template-name='_sidebar'>
+<h1> This is a sidebar </h1>
+</script>
+<script type='text/x-handlebars' data-template-name='products'>
+  <h1> List of All Products </h1>
+    {{#each}}
+    <p>{{title}}</p>
+    <p>{{description}}</p>
+    <p>{{onSale}}</p>
+    <p>{{image}}</p>
+    {{/each}}
+    {{partial "sidebar"}}
+</script>
+    
